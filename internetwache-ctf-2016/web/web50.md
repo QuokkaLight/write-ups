@@ -12,6 +12,8 @@
 In the web50.zip we can find this file:
 
 ```
+<?php 
+
 function clean_hash($hash) {
     return preg_replace("/[^0-9a-f]/","",$hash);
 }
@@ -33,6 +35,8 @@ I found this article https://www.whitehatsec.com/blog/magic-hashes/
 Perfect, i just need to find a valid `md5(md5($str) . "SALT")`.
 
 ```
+<?php 
+
 $charset = 'abcdefghijklmnopqrstuvwxyz';
 $charset = '0123456789';
 $charset .= 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
